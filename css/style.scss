@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;900&display=swap');
+@import 'reset';
+
+$primaryColor: #7f5cff;
+$primaryTextColor: #fff;
+$maxWidth: 1920;
+
+@mixin adaptiv-font($pcSize, $mobSize) {
+	$addSize: $pcSize - $mobSize;
+	$maxWidth: $maxWidth - 320;
+	font-size: calc(
+		#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth})
+	);
+}
+
+a {
+    color: inherit;
+    font-family: inherit;
+}
+
+body {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	@include adaptiv-font(20, 15);
+	color: $primaryTextColor;
+}
+
+.container {
+	//max-width: 1140px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+.hero {
+	background: url(../img/hero-bg.jpg) left 20% center / cover;
+	min-height: 100vh;
+	height: 100%;
+	&__container {
+		height: 100%;
+		display: flex;
+		align-items: center;
+		max-width: 1788px;
+	}
+
+	&__content {
+        position: relative;
+        padding: 0.8em 0 0.8em 3rem;
+        &::before {
+            position: absolute;
+            content: '';
+            display: block;
+            top: 0;
+            left: 0;
+            width: 6px;
+            height: 100%;
+            background-color: $primaryColor;
+            box-shadow: 0px 0px 17px rgba(191, 58, 255, 0.4);
+            border-radius: 41px;
+        }
+	}
+
+	&__subtitle {
+        text-transform: uppercase;
+        margin-bottom: 16px;
+	}
+
+	&__title {
+        max-width: 600px;
+        @include adaptiv-font(48, 25);
+        letter-spacing: 0.05em;
+        font-weight: 700;
+        line-height: 140%;
+        margin-bottom: 1.35em;
+	}
+
+	&__btn {
+        display: inline-block;
+        @include adaptiv-font(18, 16);
+        font-weight: 900;
+        padding: 17px 49px;
+        background: linear-gradient(98.73deg, #7A42F4 0%, #4642F4 100%), #FFFFFF;
+        border-radius: 6px;
+	}
+}

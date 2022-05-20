@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;900&display=swap");
+/*Reset styles*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0; }
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+:focus, :active {
+  outline: none; }
+
+a:focus, a:active {
+  outline: none; }
+
+nav, footer, header, aside {
+  display: block; }
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+input, button, textarea {
+  font-family: inherit; }
+
+input::-ms-clear {
+  display: none; }
+
+button {
+  cursor: pointer; }
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0; }
+
+a, a:visited {
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: none; }
+
+ul li {
+  list-style: none; }
+
+img {
+  vertical-align: top; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400; }
+
+/*--------------------*/
+a {
+  color: inherit;
+  font-family: inherit; }
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: calc( 15px + 5 * ((100vw - 320px) / 1600) );
+  color: #fff; }
+
+.container {
+  margin: 0 auto;
+  padding: 0 20px; }
+
+.hero {
+  background: url(../img/hero-bg.jpg) left 20% center/cover;
+  min-height: 100vh;
+  height: 100%; }
+  .hero__container {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    max-width: 1788px; }
+  .hero__content {
+    position: relative;
+    padding: 0.8em 0 0.8em 3rem; }
+    .hero__content::before {
+      position: absolute;
+      content: '';
+      display: block;
+      top: 0;
+      left: 0;
+      width: 6px;
+      height: 100%;
+      background-color: #7f5cff;
+      -webkit-box-shadow: 0px 0px 17px rgba(191, 58, 255, 0.4);
+              box-shadow: 0px 0px 17px rgba(191, 58, 255, 0.4);
+      border-radius: 41px; }
+  .hero__subtitle {
+    text-transform: uppercase;
+    margin-bottom: 16px; }
+  .hero__title {
+    max-width: 600px;
+    font-size: calc( 25px + 23 * ((100vw - 320px) / 1600) );
+    letter-spacing: 0.05em;
+    font-weight: 700;
+    line-height: 140%;
+    margin-bottom: 1.35em; }
+  .hero__btn {
+    display: inline-block;
+    font-size: calc( 16px + 2 * ((100vw - 320px) / 1600) );
+    font-weight: 900;
+    padding: 17px 49px;
+    background: linear-gradient(98.73deg, #7A42F4 0%, #4642F4 100%), #FFFFFF;
+    border-radius: 6px; }
+
+/*# sourceMappingURL=style.css.map */
